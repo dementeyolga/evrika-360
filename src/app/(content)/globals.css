@@ -3,8 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: hsl(210, 13%, 94%);
+  --foreground: hsl(0, 0%, 100%);
+  --green-200: hsla(155, 54%, 46%, 0.16);
+  --green-500: hsl(155, 54%, 46%);
+  --sky-200: hsla(194, 99%, 43%, 0.09);
+  --sky-500: hsl(194, 99%, 43%);
+  --orange-200: hsla(40, 86%, 49%, 0.15);
+  --orange-500: hsl(40, 86%, 49%);
+  --slate-200: hsla(205, 99%, 28%, 0.15);
+  --slate-500: hsl(205, 99%, 28%);
+  --white: hsl(0, 0%, 100%);
+  --font-main: hsl(206, 80%, 14%);
+  --font-contrast: hsl(0, 0%, 100%);
+  --font-secondary: hsl(207, 13%, 59%);
+  --shadow-button: 0px 33px 20px 0px hsla(155, 54%, 46%, 0.2);
 }
 
 body {
