@@ -30,14 +30,39 @@ const config: Config = {
       },
       white: 'var(--white)',
       font: {
-        main: 'var(--main)',
-        contrast: 'var(--contrast)',
-        secondary: 'var(--secondary)',
+        main: 'var(--font-main)',
+        contrast: 'var(--font-contrast)',
+        secondary: 'var(--font-secondary)',
       },
     },
     extend: {
       boxShadow: {
         button: 'var(--shadow-button)',
+      },
+      borderRadius: {
+        section: 'var(--radius-section)',
+        'section-md': 'var(--radius-section-md)',
+        block: 'var(--radius-block)',
+        'block-sm': 'var(--radius-block-sm)',
+      },
+      maxWidth: {
+        '7xl': '1240px',
+      },
+      padding: {
+        '15': '3.75rem',
+        '7.5': '1.875rem',
+        '21': '5.25rem',
+        '37px': '37px',
+        '51px': '51px',
+        '77px': '77px',
+        '226px': '226px',
+      },
+      margin: {
+        '42': '10.5rem',
+        '25': '6.25rem',
+      },
+      lineHeight: {
+        '7.5': '1.875rem',
       },
     },
   },

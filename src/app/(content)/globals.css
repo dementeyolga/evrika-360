@@ -17,11 +17,30 @@
   --font-main: hsl(206, 80%, 14%);
   --font-contrast: hsl(0, 0%, 100%);
   --font-secondary: hsl(207, 13%, 59%);
-  --shadow-button: 0px 33px 20px 0px hsla(155, 54%, 46%, 0.2);
+  --shadow-button: 0px 32px 14px -16px hsla(155, 54%, 46%, 0.3);
+  --radius-section: 60px;
+  --radius-section-md: 40px;
+  --radius-block: 20px;
+  --radius-block-sm: 16px;
 }
 
 body {
-  color: var(--foreground);
+  color: var(--font-main);
   background: var(--background);
   font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  font-size: 2.25rem;
+  line-height: 3.3125rem;
+}
+
+h3 {
+  font-size: 2.0625rem;
+  line-height: 3.0625rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+  line-height: 2.8125rem;
 }

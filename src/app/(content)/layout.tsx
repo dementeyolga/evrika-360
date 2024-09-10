@@ -3,6 +3,9 @@ import { DM_Sans } from 'next/font/google'
 import './globals.css'
 
 export const metadata: Metadata = {
+  icons: {
+    icon: '/favicon.svg',
+  },
   title: 'Эврика 360 - Стратегии правильных решений',
   description:
     'Доверьте анализ и оценку качества работы сотрудников речевой аналитике сегодня',
