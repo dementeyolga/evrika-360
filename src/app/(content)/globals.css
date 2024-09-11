@@ -3,23 +3,27 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(210, 13%, 94%);
-  --foreground: hsl(0, 0%, 100%);
-  --green-200: hsla(155, 54%, 46%, 0.16);
-  --green-500: hsl(155, 54%, 46%);
-  --sky-200: hsla(194, 99%, 43%, 0.09);
-  --sky-500: hsl(194, 99%, 43%);
-  --orange-200: hsla(40, 86%, 49%, 0.15);
-  --orange-500: hsl(40, 86%, 49%);
-  --slate-200: hsla(205, 99%, 28%, 0.15);
-  --slate-500: hsl(205, 99%, 28%);
-  --white: hsl(0, 0%, 100%);
-  --font-main: hsl(206, 80%, 14%);
-  --font-contrast: hsl(0, 0%, 100%);
-  --font-secondary: hsl(207, 13%, 59%);
-  --shadow-button: 0px 32px 14px -16px hsla(155, 54%, 46%, 0.3);
+  --background: #eef0f2;
+  --foreground: #ffffff;
+  --green-200: #36b58029;
+  --green-500: #36b580;
+  --sky-200: #01a8da17;
+  --sky-500: #01a8da;
+  --orange-200: #e8a11126;
+  --orange-500: #e8a111;
+  --slate-200: #01538e26;
+  --slate-500: #01538e;
+  --slate-800: #07273f;
+  --slate-pale: #072840ab;
+  --white: #ffffff;
+  --font-main: #072840;
+  --font-contrast: #ffffff;
+  --font-secondary: #8998a4;
+  --border: #b8b8b8;
+  --shadow-button: 0px 32px 14px -16px #36b5804d;
   --radius-section: 60px;
-  --radius-section-md: 40px;
+  --radius-section-md: 50px;
+  --radius-section-sm: 40px;
   --radius-block: 20px;
   --radius-block-sm: 16px;
 }
@@ -27,7 +31,7 @@
 body {
   color: var(--font-main);
   background: var(--background);
-  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+  font-family: var(--font-dmsans), Arial, Helvetica, sans-serif;
 }
 
 h2 {
@@ -43,4 +47,19 @@ h3 {
 h4 {
   font-size: 1.5rem;
   line-height: 2.8125rem;
+}
+
+p.large {
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+}
+
+p.small {
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
+}
+
+p.smaller {
+  font-size: 0.75rem;
+  line-height: 1.0625rem;
 }

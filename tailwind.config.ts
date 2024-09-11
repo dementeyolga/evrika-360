@@ -27,8 +27,11 @@ const config: Config = {
       slate: {
         200: 'var(--slate-200)',
         500: 'var(--slate-500)',
+        800: 'var(--slate-800)',
+        pale: 'var(--slate-pale)',
       },
       white: 'var(--white)',
+      border: 'var(--border)',
       font: {
         main: 'var(--font-main)',
         contrast: 'var(--font-contrast)',
@@ -42,6 +45,7 @@ const config: Config = {
       borderRadius: {
         section: 'var(--radius-section)',
         'section-md': 'var(--radius-section-md)',
+        'section-sm': 'var(--radius-section-sm)',
         block: 'var(--radius-block)',
         'block-sm': 'var(--radius-block-sm)',
       },
@@ -63,6 +67,10 @@ const config: Config = {
       },
       lineHeight: {
         '7.5': '1.875rem',
+      },
+      gridTemplateColumns: {
+        'slider-case-top': '40.9% 54.54%',
+        'slider-case-bottom': '54.54% 40.9%',
       },
     },
   },

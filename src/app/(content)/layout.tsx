@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { DM_Sans } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -11,7 +11,16 @@ export const metadata: Metadata = {
     'Доверьте анализ и оценку качества работы сотрудников речевой аналитике сегодня',
 }
 
-const dmSans = DM_Sans({ subsets: ['latin'] })
+const dmSans = localFont({
+  src: './fonts/DMSans-Regular.ttf',
+  display: 'swap',
+  variable: '--font-dmsans',
+})
+const dmSansBold = localFont({
+  src: './fonts/DMSans-Bold.ttf',
+  display: 'swap',
+  variable: '--font-dmsans-bold',
+})
 
 export default function RootLayout({
   children,
@@ -19,8 +28,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ru">
-      <body className={`${dmSans.className} antialiased`}>{children}</body>
+    <html
+      lang="ru"
+      className={[dmSans.variable, dmSansBold.variable].join(' ')}
+    >
+      <body>{children}</body>
     </html>
   )
 }
