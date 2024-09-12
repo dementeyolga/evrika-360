@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
-import './globals.css'
+import './(content)/globals.css'
 
 export const metadata: Metadata = {
   icons: {
@@ -12,12 +12,12 @@ export const metadata: Metadata = {
 }
 
 const dmSans = localFont({
-  src: './fonts/DMSans-Regular.ttf',
+  src: './(content)/fonts/DMSans-Regular.ttf',
   display: 'swap',
   variable: '--font-dmsans',
 })
 const dmSansBold = localFont({
-  src: './fonts/DMSans-Bold.ttf',
+  src: './(content)/fonts/DMSans-Bold.ttf',
   display: 'swap',
   variable: '--font-dmsans-bold',
 })

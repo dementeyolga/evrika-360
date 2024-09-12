@@ -41,9 +41,10 @@ export default function HomePage() {
       <div className="px-15 mx-auto w-full max-w-7xl">
         <div className="relative ml-42 py-51px pr-51px pl-226px bg-sky-500 text-font-contrast rounded-section-md">
           <img
-            className="absolute -top-[91px] -left-[71px]"
+            className="absolute -top-[60px] -left-[50px]"
             src="/character-idea.png"
             alt=""
+            width={270}
           />
           <h3 className="font-bold">Эврика360 — один сервис</h3>
           <h3>для большинства отделов в компании</h3>
@@ -64,7 +65,7 @@ export default function HomePage() {
         </div>
 
         <div className="mb-[97px] flex gap-x-[65px]">
-          <div className="w-full max-w-[735px] grow shrink-0 h-fit p-51px bg-foreground rounded-section-md rounded-br-none">
+          <div className="sticky top-20 w-full max-w-[735px] grow shrink-0 h-fit p-51px bg-foreground rounded-section-md rounded-br-none">
             <h3>
               — Я правильно понимаю, что речевая аналитика полезна когда...
             </h3>
@@ -87,7 +88,7 @@ export default function HomePage() {
 
         <div className="relative max-w-[787px] ml-auto mb-25 py-[75px] pr-[122px] pl-226px bg-sky-500 text-font-contrast rounded-section-md rounded-bl-none">
           <img
-            className="absolute -top-[33px] -left-[21px]"
+            className="absolute -top-[25px] -left-[21px]"
             src="/character-like.png"
             alt=""
           />

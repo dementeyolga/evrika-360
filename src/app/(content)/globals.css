@@ -34,6 +34,11 @@ body {
   font-family: var(--font-dmsans), Arial, Helvetica, sans-serif;
 }
 
+h1 {
+  font-size: 3.125rem;
+  line-height: 3.3125rem;
+}
+
 h2 {
   font-size: 2.25rem;
   line-height: 3.3125rem;
@@ -49,9 +54,19 @@ h4 {
   line-height: 2.8125rem;
 }
 
+p {
+  font-size: 1rem;
+  line-height: 1.875rem;
+}
+
 p.large {
   font-size: 1.125rem;
   line-height: 1.875rem;
+}
+
+p.medium {
+  font-size: 1.25rem;
+  line-height: 2.375rem;
 }
 
 p.small {
