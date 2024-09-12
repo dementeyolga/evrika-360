@@ -15,14 +15,14 @@ export const TickIcon = ({ variant }: TickIconProps) => {
       )}
     >
       <svg
-        width={variant !== 'accent' ? 23 : 28}
-        height={variant !== 'accent' ? 18 : 21}
+        width={variant !== 'accent' ? 22 : 28}
+        height={variant !== 'accent' ? 17 : 21}
         className="fill-current"
       >
         <use
           href="/tick.svg#tick"
-          width={variant !== 'accent' ? 23 : 28}
-          height={variant !== 'accent' ? 18 : 21}
+          width={variant !== 'accent' ? 22 : 28}
+          height={variant !== 'accent' ? 17 : 21}
         ></use>
       </svg>
     </div>

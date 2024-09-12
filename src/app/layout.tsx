@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './(content)/globals.css'
+import clsx from 'clsx'
 
 export const metadata: Metadata = {
   icons: {
@@ -12,14 +13,39 @@ export const metadata: Metadata = {
 }
 
 const dmSans = localFont({
-  src: './(content)/fonts/DMSans-Regular.ttf',
-  display: 'swap',
+  src: [
+    {
+      path: './(content)/fonts/DMSansRegular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './(content)/fonts/DMSansItalic.ttf',
+      weight: '400',
+      style: 'italic',
+    },
+    {
+      path: './(content)/fonts/DMSansMedium.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: './(content)/fonts/DMSansMediumItalic.ttf',
+      weight: '500',
+      style: 'italic',
+    },
+    {
+      path: './(content)/fonts/DMSansBold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: './(content)/fonts/DMSansBoldItalic.ttf',
+      weight: '700',
+      style: 'italic',
+    },
+  ],
   variable: '--font-dmsans',
-})
-const dmSansBold = localFont({
-  src: './(content)/fonts/DMSans-Bold.ttf',
-  display: 'swap',
-  variable: '--font-dmsans-bold',
 })
 
 export default function RootLayout({
@@ -28,11 +54,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html
-      lang="ru"
-      className={[dmSans.variable, dmSansBold.variable].join(' ')}
-    >
-      <body>{children}</body>
+    <html lang="ru" className={clsx(dmSans.variable)}>
+      <body className="font-sans">{children}</body>
     </html>
   )
 }

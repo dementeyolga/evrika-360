@@ -13,7 +13,7 @@ export default function HomePage() {
       <div className="px-15 mx-auto mb-25 w-full max-w-7xl bg-foreground rounded-section">
         <Header />
         <div className="flex overflow-hidden">
-          <div className="max-w-[590px] flex flex-col justify--end">
+          <div className="max-w-[590px] flex flex-col justify-end">
             <h2 className="pb-21">
               <b>
                 Доверьте анализ и оценку <br />
@@ -32,8 +32,15 @@ export default function HomePage() {
               <ActionButton>Записаться на демо</ActionButton>
             </div>
           </div>
-          <div className="relative -right-[32px] w-full max-w-[576px] flex items-end">
-            <img className="block" src="/promo.png" alt="" />
+
+          <div className="relative w-full h-[670px] max-w-[530px]">
+            <div className="absolute bottom-0 -left-[15px] h-full">
+              <img
+                className="h-full w-auto max-w-max"
+                src="/promo.png"
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -92,12 +99,14 @@ export default function HomePage() {
             src="/character-like.png"
             alt=""
           />
-          <h3>— Да, и не только в этом</h3>
+          <h3>
+            <b>— Да, и не только в этом</b>
+          </h3>
         </div>
 
         <div className="mb-25">
           <CasesSlider />
-          <div className="flex justify-center mt-10 mb-25">
+          <div className="flex justify-center mt-[30px] mb-25">
             <ActionButton>Протестировать на своих данных</ActionButton>
           </div>
         </div>

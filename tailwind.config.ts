@@ -39,6 +39,9 @@ const config: Config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['var(--font-dmsans)'],
+      },
       boxShadow: {
         button: 'var(--shadow-button)',
       },
