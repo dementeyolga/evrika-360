@@ -34,6 +34,11 @@ body {
   font-family: var(--font-dmsans), Arial, Helvetica, sans-serif;
 }
 
+input {
+  border: none;
+  outline: none;
+}
+
 h1 {
   font-size: 3.125rem;
   line-height: 3.3125rem;
