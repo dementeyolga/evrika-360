@@ -12,7 +12,7 @@ export default function HomePage() {
     <div className="bg-background p-5">
       <div className="px-15 mx-auto mb-25 w-full max-w-7xl bg-foreground rounded-section">
         <Header />
-        <div className="flex overflow-hidden">
+        <div className="flex items-end overflow-hidden">
           <div className="max-w-[590px] flex flex-col justify-end">
             <h2 className="pb-21">
               <b>
@@ -48,21 +48,20 @@ export default function HomePage() {
       <div className="px-15 mx-auto w-full max-w-7xl">
         <div className="relative ml-42 py-51px pr-51px pl-226px bg-sky-500 text-font-contrast rounded-section-md">
           <img
-            className="absolute -top-[60px] -left-[50px]"
+            className="absolute -top-[83px] -left-[69px]"
             src="/character-idea.png"
             alt=""
-            width={270}
           />
           <h3 className="font-bold">Эврика360 — один сервис</h3>
           <h3>для большинства отделов в компании</h3>
         </div>
 
-        <div className="mt-20 mb-32 grid grid-cols-3 gap-y-[68px]">
+        <div className="mt-20 mb-32 grid grid-cols-3 gap-x-5 gap-y-[63px]">
           {deptBenefits.map(({ dept, benefits }) => (
             <div key={dept} className="max-w-[281px] w-full">
               <TickIcon />
-              <h4 className="mt-[37px] mb-5 font-bold text-nowrap">{dept}</h4>
-              <div className="flex flex-col gap-y-2">
+              <h4 className="mt-[31px] mb-4 font-bold text-nowrap">{dept}</h4>
+              <div className="flex flex-col">
                 {benefits.map((b) => (
                   <ListItem key={b}>{b}</ListItem>
                 ))}
@@ -77,7 +76,7 @@ export default function HomePage() {
               — Я правильно понимаю, что речевая аналитика полезна когда...
             </h3>
           </div>
-          <div className="shrink -mt-2 max-w-[310px] flex flex-col gap-y-[71px]">
+          <div className="shrink -mt-2 max-w-[310px] flex flex-col gap-y-[68px]">
             {usefulCases.map(({ imgSrc, text }) => (
               <CaseCard
                 key={text}
@@ -95,8 +94,8 @@ export default function HomePage() {
 
         <div className="relative max-w-[787px] ml-auto mb-25 py-[75px] pr-[122px] pl-226px bg-sky-500 text-font-contrast rounded-section-md rounded-bl-none">
           <img
-            className="absolute -top-[25px] -left-[21px]"
-            src="/character-like.png"
+            className="absolute bottom-0 -left-[21px]"
+            src="/character-hand.png"
             alt=""
           />
           <h3>

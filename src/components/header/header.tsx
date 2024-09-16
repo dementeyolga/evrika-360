@@ -3,7 +3,7 @@ import { HeaderButton } from '../(buttons)/header-button'
 
 export const Header = () => {
   return (
-    <header className="pt-10 pb-7.5  flex justify-between items-center">
+    <header className="pt-9 pb-7.5 flex justify-between items-center">
       <a href="/">
         <img src="/logo.svg" alt="logo" />
       </a>
@@ -18,7 +18,7 @@ export const Header = () => {
         </div>
       </div>
 
-      <div className="flex gap-9 items-center">
+      <div className="flex gap-12 items-center">
         <div className="flex flex-col gap-1">
           <a href="tel: +375293885512" className="text-xl font-bold flex gap-1">
             +375-29-388-55-12 <img src="/arrow.svg" alt="arrow icon" />

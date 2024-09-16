@@ -9,11 +9,11 @@ export const ListItem = ({ size, children }: ListItemProps) => {
   return (
     <p
       className={clsx(
-        'flex gap-x-5 text-slate-pale',
+        'flex items-start gap-x-5 text-slate-pale leading-[29px]',
         size === 'big' && 'large',
       )}
     >
-      <img className="" src="/bullet.svg" alt="bullet icon" />
+      <img className="mt-3" src="/bullet.svg" alt="bullet icon" />
       {children}
     </p>
   )
