@@ -3,18 +3,21 @@ import { Checkbox } from '../ui/checkbox'
 import { PhoneInput, TextInput } from '../ui/input'
 
 interface CallbackFormProps {
+  basic?: true
   buttonText: string
 }
 
-export const CallbackForm = ({ buttonText }: CallbackFormProps) => {
+export const CallbackForm = ({ buttonText, basic }: CallbackFormProps) => {
   return (
     <form className="w-full flex flex-col gap-5">
       <TextInput name="Имя" label="Ваше имя" placeholder="Например, Иван" />
-      <TextInput
-        name="Роль"
-        label="Ваша роль в компании"
-        placeholder="Например, СEO"
-      />
+      {!basic && (
+        <TextInput
+          name="Роль"
+          label="Ваша роль в компании"
+          placeholder="Например, CEO"
+        />
+      )}
       <PhoneInput label="Введите ваш номер телефона" />
 
       <div className="flex flex-col gap-[26px]">

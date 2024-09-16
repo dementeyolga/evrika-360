@@ -1,6 +1,6 @@
 import { ActionButton } from '@/components/(buttons)/action-button'
+import { PopupButton } from '@/components/(buttons)/features/popup-button'
 import { CaseCard } from '@/components/(cards)/case-card'
-import { CallbackForm } from '@/components/(forms)/callback-form'
 import { TickIcon } from '@/components/(icons)/tick-icon'
 import { CasesSlider } from '@/components/(sliders)/cases-slider'
 import { ListItem } from '@/components/(text)/list-item'
@@ -11,10 +11,6 @@ import { usefulCases } from '@/data/useful-cases'
 export default function HomePage() {
   return (
     <div className="bg-background p-5">
-      <div className="bg-foreground mx-25 my-16 p-10 flex flex-col gap-y-5">
-        <CallbackForm buttonText="Записаться" />
-      </div>
-
       <div className="px-15 mx-auto mb-25 w-full max-w-7xl bg-foreground rounded-section">
         <Header />
         <div className="flex items-end overflow-hidden">
@@ -34,7 +30,9 @@ export default function HomePage() {
               вашей компании
             </p>
             <div className="pb-77px">
-              <ActionButton>Записаться на демо</ActionButton>
+              <PopupButton button="action" variant="demo">
+                Записаться на демо
+              </PopupButton>
             </div>
           </div>
 
@@ -111,7 +109,9 @@ export default function HomePage() {
         <div className="mb-25">
           <CasesSlider />
           <div className="flex justify-center mt-[30px] mb-25">
-            <ActionButton>Протестировать на своих данных</ActionButton>
+            <PopupButton variant="test">
+              Протестировать на своих данных
+            </PopupButton>
           </div>
         </div>
       </div>

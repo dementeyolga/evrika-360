@@ -1,5 +1,5 @@
 import { MessengerIcon } from '@/components/(icons)/messenger-icon'
-import { HeaderButton } from '../(buttons)/header-button'
+import { PopupButton } from '../(buttons)/features/popup-button'
 
 export const Header = () => {
   return (
@@ -27,7 +27,9 @@ export const Header = () => {
             Пн-Пт: с 09-00 до 18-00
           </p>
         </div>
-        <HeaderButton>Заказать звонок</HeaderButton>
+        <PopupButton button="header" variant="basic">
+          Заказать звонок
+        </PopupButton>
       </div>
     </header>
   )

@@ -11,6 +11,8 @@ const config: Config = {
       transparent: 'transparent',
       current: 'currentColor',
       background: 'var(--background)',
+      'background-transparent': 'var(--background-transparent)',
+      'background-transparent-darker': 'var(--background-transparent-darker)',
       foreground: 'var(--foreground)',
       green: {
         200: 'var(--green-200)',

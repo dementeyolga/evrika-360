@@ -4,6 +4,8 @@
 
 :root {
   --background: #eef0f2;
+  --background-transparent: #eef0f2b9;
+  --background-transparent-darker: #c5c6c7b4;
   --foreground: #ffffff;
   --green-200: #36b58029;
   --green-500: #36b580;
@@ -59,9 +61,9 @@ h4 {
   line-height: 2.8125rem;
 }
 
-p {
-  font-size: 1rem;
-  line-height: 1.875rem;
+p.xl {
+  font-size: 1.6875rem;
+  line-height: 2.5625rem;
 }
 
 p.large {
@@ -72,6 +74,11 @@ p.large {
 p.medium {
   font-size: 1.25rem;
   line-height: 2.375rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.875rem;
 }
 
 p.small {
