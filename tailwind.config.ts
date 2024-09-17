@@ -49,10 +49,12 @@ const config: Config = {
       },
       borderRadius: {
         section: 'var(--radius-section)',
+        'section-mobile': 'var(--radius-section-mobile)',
         'section-md': 'var(--radius-section-md)',
         'section-sm': 'var(--radius-section-sm)',
         block: 'var(--radius-block)',
         'block-sm': 'var(--radius-block-sm)',
+        'block-mobile': 'var(--radius-block-mobile)',
       },
       maxWidth: {
         '7xl': '1240px',

@@ -7,9 +7,11 @@ interface CaseCardProps {
 
 export const CaseCard = ({ icon, children }: CaseCardProps) => {
   return (
-    <div className="flex flex-col gap-y-[30px] text-slate-800">
+    <div className="flex flex-col gap-y-[26px] lg:gap-y-[30px] text-slate-800">
       {icon}
-      <p className="text-[21px] leading-[34px]">{children}</p>
+      <p className="text-[16px] leading-[29px] lg:text-[21px] lg:leading-[34px]">
+        {children}
+      </p>
     </div>
   )
 }

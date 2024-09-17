@@ -7,14 +7,21 @@ interface ListItemProps {
 
 export const ListItem = ({ size, children }: ListItemProps) => {
   return (
-    <p
+    <div
       className={clsx(
-        'flex items-start gap-x-5 text-slate-pale leading-[29px]',
+        'flex items-start gap-x-2 lg:gap-x-5 text-slate-pale leading-5 lg:leading-[29px]',
         size === 'big' && 'large',
       )}
     >
-      <img className="mt-3" src="/bullet.svg" alt="bullet icon" />
+      <div className="shrink-0 mt-[7px] lg:mt-3">
+        <img
+          className="w-[6px] lg:w-full"
+          src="/bullet.svg"
+          alt="bullet icon"
+        />
+      </div>
+
       {children}
-    </p>
+    </div>
   )
 }

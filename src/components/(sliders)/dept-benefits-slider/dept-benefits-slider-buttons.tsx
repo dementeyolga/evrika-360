@@ -59,12 +59,11 @@ export const PrevButton: FC<PropType> = (props) => {
 
   return (
     <button
-      className="py-[15px] px-[23px] lg:py-[20px] lg:px-[28px] rounded-block-sm lg:rounded-block border border-border hover:bg-foreground transition-colors  duration-300"
+      className="py-[15px] px-[23px] rounded-block-sm border border-border hover:bg-foreground transition-colors  duration-300"
       type="button"
       {...restProps}
     >
-      <img className="lg:hidden" src="/prev-arrow-small.svg" alt="" />
-      <img className="hidden lg:block" src="/prev-arrow.svg" alt="" />
+      <img src="/prev-arrow-small.svg" alt="" />
       {children}
     </button>
   )
@@ -75,12 +74,11 @@ export const NextButton: FC<PropType> = (props) => {
 
   return (
     <button
-      className="py-[15px] px-[23px] lg:py-[20px] lg:px-[28px] rounded-block-sm lg:rounded-block border border-border hover:bg-foreground transition-colors duration-300"
+      className="py-[15px] px-[23px] rounded-block-sm border border-border hover:bg-foreground transition-colors duration-300"
       type="button"
       {...restProps}
     >
-      <img className="lg:hidden" src="/next-arrow-small.svg" alt="" />
-      <img className="hidden lg:block" src="/next-arrow.svg" alt="" />
+      <img src="/next-arrow-small.svg" alt="" />
       {children}
     </button>
   )

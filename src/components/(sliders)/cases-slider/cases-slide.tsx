@@ -46,38 +46,42 @@ export const CasesSlide = ({
   additional,
 }: SliderCase) => {
   return (
-    <div className="py-10 px-[50px] bg-foreground rounded-section-sm">
+    <div className="p-5 lg:py-10 lg:px-[50px] bg-foreground rounded-block lg:rounded-section-sm">
       <p
         className={clsx(
-          'mb-6 px-5 py-[10px] w-fit small rounded-full',
+          'mb-4 lg:mb-6 px-2.5 lg:px-5 py-2 lg:py-[2.5] w-fit small rounded-block-mobile lg:rounded-full',
           colorConfig[sphere.color].bg,
           colorConfig[sphere.color].text,
         )}
       >
         {sphere.value}
       </p>
-      <h4 className="mb-[34px] leading-[38px]">{description}</h4>
-      <div className="mb-5 grid grid-cols-slider-case-top justify-between">
+
+      <h4 className="mb-2.5 lg:mb-[34px] text-[17px] lg:text-[24px] leading-[25px] lg:leading-[38px]">
+        {description}
+      </h4>
+
+      <div className="mb-2.5 lg:mb-5 grid gap-y-2.5 lg:grid-cols-slider-case-top lg:justify-between">
         {indicators.map(({ title, description }) => (
           <div
             key={title}
-            className="min-h-[136px] bg-background px-5 py-4 rounded-block"
+            className="lg:min-h-[136px] bg-background p-4 lg:px-5 lg:py-4 rounded-block-sm lg:rounded-block"
           >
-            <h3>{title}</h3>
+            <h3 className="text-[22px] lg:text-[33px]">{title}</h3>
             <p className="small text-font-secondary">{description}</p>
           </div>
         ))}
       </div>
 
       {'indicators' in additional && (
-        <div className="grid grid-cols-slider-case-bottom justify-between">
+        <div className="grid gap-y-2.5 lg:grid-cols-slider-case-bottom lg:justify-between">
           {additional.indicators.map(
             ({ title: { value, crossed }, description }) => (
               <div
                 key={value}
-                className="min-h-[136px] bg-background px-5 py-4 rounded-block"
+                className="lg:min-h-[136px] bg-background p-4 lg:px-5 lg:py-4 rounded-block-sm lg:rounded-block"
               >
-                <h3>
+                <h3 className="text-[22px] lg:text-[33px]">
                   {value}{' '}
                   {crossed && (
                     <span className="text-font-secondary line-through">
@@ -93,29 +97,31 @@ export const CasesSlide = ({
       )}
 
       {'largeIndicator' in additional && (
-        <div className="min-h-[136px] bg-background px-5 py-5 rounded-block">
-          <h3>
+        <div className="lg:min-h-[136px] bg-background p-4 lg:px-5 lg:py-5 rounded-block-sm lg:rounded-block">
+          <h3 className="text-[22px] lg:text-[33px]">
             <span className="text-font-secondary line-through">
               {additional.largeIndicator.title.crossed}
             </span>{' '}
             {additional.largeIndicator.title.value}
           </h3>
-          <p className="small text-font-secondary">{description}</p>
+          <p className="small text-font-secondary">
+            {additional.largeIndicator.description}
+          </p>
         </div>
       )}
 
       {'disclaimerIndicator' in additional && (
-        <div className="min-h-[136px] bg-background rounded-block flex">
-          <div className="px-5 py-5">
+        <div className="lg:min-h-[136px] lg:bg-background rounded-block-sm lg:rounded-block lg:flex">
+          <div className="mb-2.5 lg:mb-0 p-4 lg:p-5 bg-background rounded-block-sm lg:bg-transparent">
             <h3>{additional.disclaimerIndicator.title}</h3>
             <p className="small text-font-secondary">
               {additional.disclaimerIndicator.description}
             </p>
           </div>
-          <div className="py-4 px-5 bg-sky-500 text-font-contrast rounded-block">
+          <div className="p-4 lg:px-5 lg:py-4 bg-sky-500 text-font-contrast rounded-block-sm lg:rounded-block">
             <img src="/disclaimer-icon.svg" alt="" />
             <p className="smaller mt-1">
-              {additional.disclaimerIndicator.disclaimer.value}
+              {additional.disclaimerIndicator.disclaimer.value}{' '}
               <b>{additional.disclaimerIndicator.disclaimer.bold}</b>
             </p>
           </div>

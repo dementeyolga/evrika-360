@@ -2,6 +2,7 @@ import { PopupButton } from '@/components/(buttons)/features/popup-button'
 import { CaseCard } from '@/components/(cards)/case-card'
 import { TickIcon } from '@/components/(icons)/tick-icon'
 import { CasesSlider } from '@/components/(sliders)/cases-slider'
+import { DeptBenefitsSlider } from '@/components/(sliders)/dept-benefits-slider'
 import { ListItem } from '@/components/(text)/list-item'
 import { Header } from '@/components/header'
 import { deptBenefits } from '@/data/dept-benefits'
@@ -9,36 +10,32 @@ import { usefulCases } from '@/data/useful-cases'
 
 export default function HomePage() {
   return (
-    <div className="bg-background p-5">
-      <div className="px-15 mx-auto mb-25 w-full max-w-7xl bg-foreground rounded-section">
+    <div className="bg-background p-2.5 lg:p-5 overflow-x-hidden">
+      <div className="px-2.5 lg:px-15 mx-auto mb-[140px] lg:mb-25 w-full max-w-7xl bg-foreground rounded-section-mobile lg:rounded-section overflow-hidden">
         <Header />
-        <div className="flex items-end overflow-hidden">
-          <div className="max-w-[590px] flex flex-col justify-end">
-            <h2 className="pb-21">
-              <b>
-                Доверьте анализ и оценку <br />
-                качества работы
-              </b>{' '}
-              сотрудников <br />
-              речевой аналитике и избавьте <br /> владельца и ТОП-менеджмент{' '}
-              <br /> от рутинных задач
+        <div className="flex flex-col lg:flex-row lg:items-end">
+          <div className="lg:max-w-[590px] flex flex-col justify-end">
+            <h2 className="mb-5 lg:mb-21">
+              <b>Доверьте анализ и оценку качества работы</b> сотрудников
+              речевой аналитике и избавьте владельца и ТОП-менеджмент от
+              рутинных задач
             </h2>
-            <p className="text-base leading-7.5 pb-37px">
+            <p className="mb-4 lg:mb-37px">
               Запишитесь на демонстрацию и{' '}
               <b>за 30 минут узнайте чем речевая аналитика будет полезна</b> для
               вашей компании
             </p>
-            <div className="pb-77px">
+            <div className="mb-[30px] lg:mb-77px">
               <PopupButton button="action" variant="demo">
                 Записаться на демо
               </PopupButton>
             </div>
           </div>
 
-          <div className="relative w-full h-[670px] max-w-[530px]">
-            <div className="absolute bottom-0 -left-[15px] h-full">
+          <div className="lg:relative w-full lg:h-[670px] lg:max-w-[530px]">
+            <div className="lg:absolute lg:bottom-0 lg:-left-[15px] lg:h-full">
               <img
-                className="h-full w-auto max-w-max"
+                className="lg:h-full lg:w-auto lg:max-w-max"
                 src="/promo.png"
                 alt=""
               />
@@ -47,10 +44,10 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="px-15 mx-auto w-full max-w-7xl">
-        <div className="relative ml-42 py-51px pr-51px pl-226px bg-sky-500 text-font-contrast rounded-section-md">
+      <div className="px-2.5 lg:px-15 mx-auto w-full max-w-7xl">
+        <div className="relative mb-[42px] lg:mb-20  lg:ml-42 pt-[90px] pb-[26px] px-5 lg:py-51px lg:pr-51px lg:pl-226px bg-sky-500 text-font-contrast rounded-section-mobile lg:rounded-section-md rounded-bl-none">
           <img
-            className="absolute -top-[83px] -left-[69px]"
+            className="absolute w-[140px] h-[140px] -top-[70px] left-5 lg:w-fit lg:h-fit lg:-top-[83px] lg:-left-[69px]"
             src="/character-idea.png"
             alt=""
           />
@@ -58,7 +55,11 @@ export default function HomePage() {
           <h3>для большинства отделов в компании</h3>
         </div>
 
-        <div className="mt-20 mb-32 grid grid-cols-3 gap-x-5 gap-y-[63px]">
+        <div className="mb-20 lg:hidden">
+          <DeptBenefitsSlider />
+        </div>
+
+        <div className="hidden lg:block mb-32 grid grid-cols-3 gap-x-5 gap-y-[63px]">
           {deptBenefits.map(({ dept, benefits }) => (
             <div key={dept} className="max-w-[281px] w-full">
               <TickIcon />
@@ -72,19 +73,19 @@ export default function HomePage() {
           ))}
         </div>
 
-        <div className="mb-[97px] flex gap-x-[65px]">
-          <div className="sticky top-20 w-full max-w-[735px] grow shrink-0 h-fit p-51px bg-foreground rounded-section-md rounded-br-none">
+        <div className="mb-[140px] lg:mb-[97px] flex flex-col lg:flex-row lg:gap-x-[65px]">
+          <div className="sticky top-20 mb-[207px] px-5 py-[33px] w-full lg:max-w-[735px] grow h-fit lg:p-[51px] bg-foreground rounded-section-mobile lg:rounded-section-md rounded-br-none">
             <h3>
               — Я правильно понимаю, что речевая аналитика полезна когда...
             </h3>
           </div>
-          <div className="shrink -mt-2 max-w-[310px] flex flex-col gap-y-[68px]">
+          <div className="-mt-[167px] lg:shrink lg:-mt-2 lg:max-w-[310px] flex flex-col gap-y-[50px] lg:gap-y-[68px]">
             {usefulCases.map(({ imgSrc, text }) => (
               <CaseCard
                 key={text}
                 icon={
                   <div>
-                    <img src={imgSrc} />
+                    <img src={imgSrc} className="h-[60px] lg:w-auto" />
                   </div>
                 }
               >
@@ -94,9 +95,9 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="relative max-w-[787px] ml-auto mb-25 py-[75px] pr-[122px] pl-226px bg-sky-500 text-font-contrast rounded-section-md rounded-bl-none">
+        <div className="relative mb-10 lg:max-w-[787px] lg:ml-auto lg:mb-25 pt-[90px] px-5 pb-6 lg:py-[75px] lg:pr-[122px] lg:pl-226px bg-sky-500 text-font-contrast rounded-section-mobile lg:rounded-section-md rounded-bl-none">
           <img
-            className="absolute bottom-0 -left-[21px]"
+            className="absolute -top-[42px] left-5 w-[120px] lg:w-auto lg:bottom-0 lg:-left-[21px]"
             src="/character-hand.png"
             alt=""
           />
@@ -105,9 +106,9 @@ export default function HomePage() {
           </h3>
         </div>
 
-        <div className="mb-25">
+        <div className="mb-20 lg:mb-25">
           <CasesSlider />
-          <div className="flex justify-center mt-[30px] mb-25">
+          <div className="flex justify-center mt-[30px]">
             <PopupButton variant="test">
               Протестировать на своих данных
             </PopupButton>
@@ -115,24 +116,23 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="px-11 pt-[75px] pb-[96px] mx-auto mb-25 w-full max-w-7xl flex items-center gap-[45px] bg-foreground rounded-section">
-        <div className="max-w-[481px] mt-4">
+      <div className="lg:px-11 lg:pt-[75px] lg:pb-[96px] mx-auto mb-25 w-full max-w-7xl flex flex-col lg:flex-row lg:items-center gap-y-[32px] lg:gap-x-[45px] bg-foreground rounded-section-mobile lg:rounded-section">
+        <div className="order-1 mb-[38px] lg:mb-0 flex justify-center lg:order-0 lg:max-w-[481px] lg:mt-4 scale-[1.04]">
           <img src="/imac.png" alt="computer picture" />
         </div>
-        <div>
-          <h2 className="mb-[33px]">
+
+        <div className="mx-2.5 my-5 order-0 lg:order-1">
+          <h2 className="mb-[26px] lg:mb-[33px]">
             Запишитесь на экскурсию <br />
             по сервису речевой аналитики <br />
             <b>Эврика360</b>
           </h2>
-          <div className="mb-[49px] max-w-[457px] flex flex-col gap-y-[25px]">
-            <ListItem size={'big'}>
-              Покажем как работает сервис изнутри
-            </ListItem>
-            <ListItem size={'big'}>
+          <div className="mb-7 lg:mb-[49px] max-w-[457px] flex flex-col gap-y-2.5 lg:gap-y-[25px]">
+            <ListItem size="big">Покажем как работает сервис изнутри</ListItem>
+            <ListItem size="big">
               Расскажем как речевая аналитика может быть полезна вашей компании
             </ListItem>
-            <ListItem size={'big'}>
+            <ListItem size="big">
               Найдём в каких коммуникациях заморожены деньги прямо сейчас
             </ListItem>
           </div>

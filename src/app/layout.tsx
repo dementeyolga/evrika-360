@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import localFont from 'next/font/local'
 import './(content)/globals.css'
 import clsx from 'clsx'
@@ -61,4 +61,9 @@ export default function RootLayout({
       </body>
     </html>
   )
+}
+
+export const viewport: Viewport = {
+  initialScale: 1,
+  width: 'device-width',
 }

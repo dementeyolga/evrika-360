@@ -9,8 +9,8 @@ export const ActionButton = ({ full, ...props }: ButtonProps) => {
   return (
     <button
       className={clsx(
-        full ? 'w-full' : 'w-fit',
-        'px-15 py-[26px] text-white text-xl font-bold rounded-full bg-green-500 shadow-button hover:-translate-y-2 transition-transform duration-300',
+        full ? 'lg:w-full' : 'lg:w-fit',
+        'w-full p-5 lg:px-15 lg:py-[26px] text-white text-sm lg:text-xl font-bold rounded-full bg-green-500 shadow-button hover:-translate-y-2 transition-transform duration-300',
       )}
       {...props}
     >
