@@ -1,4 +1,3 @@
-import { ActionButton } from '@/components/(buttons)/action-button'
 import { PopupButton } from '@/components/(buttons)/features/popup-button'
 import { CaseCard } from '@/components/(cards)/case-card'
 import { TickIcon } from '@/components/(icons)/tick-icon'
@@ -137,7 +136,7 @@ export default function HomePage() {
               Найдём в каких коммуникациях заморожены деньги прямо сейчас
             </ListItem>
           </div>
-          <ActionButton>Записаться на экскурсию</ActionButton>
+          <PopupButton>Записаться на экскурсию</PopupButton>
         </div>
       </div>
     </div>
