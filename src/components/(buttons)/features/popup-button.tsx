@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, MouseEvent } from 'react'
+import { useState, MouseEvent, useRef } from 'react'
 import { ActionButton } from '../action-button'
 import { CallbackModal } from '@/components/(modals)/callback-modal/callback-modal'
 import { HeaderButton } from '../header-button'
@@ -19,13 +19,26 @@ export const PopupButton = ({
   children,
 }: PopupButtonProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const modalRef = useRef<HTMLDivElement>(null)
 
   const handleOpenModal = () => {
     setIsModalOpen(true)
   }
 
   const handleCloseModal = () => {
-    setIsModalOpen(false)
+    const modal = modalRef.current
+
+    if (modal) {
+      modal.addEventListener(
+        'animationend',
+        () => {
+          setIsModalOpen(false)
+        },
+        { once: true },
+      )
+
+      modal.classList.add('animate-fade-out')
+    }
   }
 
   const wrapperClickHandler = (e: MouseEvent<HTMLDivElement>) => {
@@ -54,6 +67,7 @@ export const PopupButton = ({
 
       {isModalOpen && (
         <Modal
+          reference={modalRef}
           onClick={wrapperClickHandler}
           handleCloseModal={handleCloseModal}
         />

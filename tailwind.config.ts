@@ -77,6 +77,16 @@ const config: Config = {
         'slider-case-top': '40.9% 54.54%',
         'slider-case-bottom': '54.54% 40.9%',
       },
+      animation: {
+        'fade-out': 'fade 0.2s ease-in-out forwards',
+        'fade-in': 'fade 0.2s ease-in-out reverse forwards',
+      },
+      keyframes: {
+        fade: {
+          from: { opacity: '1' },
+          to: { opacity: '0' },
+        },
+      },
     },
   },
 

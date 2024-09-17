@@ -1,17 +1,35 @@
+'use client'
+
 import clsx from 'clsx'
-import { MouseEventHandler, ReactElement } from 'react'
+import { MouseEventHandler, ReactElement, RefObject, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 
 export const Modal = ({
+  reference,
   bg = 'standard',
   onClick,
   children,
 }: {
-  bg: string
+  reference: RefObject<HTMLDivElement>
+  bg?: 'standard' | 'darker'
   onClick: MouseEventHandler<HTMLDivElement>
   children: ReactElement | ReactElement[]
 }) => {
   const modalRoot = document.getElementById('modal-root')
+
+  useEffect(() => {
+    const modal = reference.current
+
+    if (modal) {
+      modal.addEventListener(
+        'animationend',
+        () => {
+          modal.classList.remove('animate-fade-in')
+        },
+        { once: true },
+      )
+    }
+  }, [reference])
 
   if (!modalRoot) return null
 
@@ -22,8 +40,9 @@ export const Modal = ({
 
   return createPortal(
     <div
+      ref={reference}
       className={clsx(
-        'fixed w-screen h-screen flex justify-center items-center z-10',
+        'fixed w-screen h-screen flex justify-center items-center animate-fade-in z-10',
         background,
       )}
       onClick={onClick}

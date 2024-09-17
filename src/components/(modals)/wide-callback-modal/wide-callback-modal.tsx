@@ -1,14 +1,16 @@
-import { MouseEventHandler, ReactElement } from 'react'
+import { MouseEventHandler, ReactElement, RefObject } from 'react'
 import { Modal } from '../modal'
 import { CallbackForm } from '@/components/(forms)/callback-form'
 
 export const WideCallbackModal = ({
+  reference,
   buttonText,
   description,
   formDescription,
   onClick,
   handleCloseModal,
 }: {
+  reference: RefObject<HTMLDivElement>
   description: ReactElement | string
   formDescription: string
   buttonText: string
@@ -16,7 +18,7 @@ export const WideCallbackModal = ({
   handleCloseModal: () => void
 }) => {
   return (
-    <Modal onClick={onClick} bg="bg-background-transparent-darker">
+    <Modal reference={reference} onClick={onClick} bg="darker">
       <div className="relative flex max-w-[1000px] min-h-[790px] w-full">
         <button
           onClick={handleCloseModal}

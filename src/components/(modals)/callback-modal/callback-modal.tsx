@@ -1,16 +1,18 @@
-import { MouseEventHandler } from 'react'
+import { MouseEventHandler, RefObject } from 'react'
 import { Modal } from '../modal'
 import { CallbackForm } from '@/components/(forms)/callback-form'
 
 export const CallbackModal = ({
+  reference,
   onClick,
   handleCloseModal,
 }: {
+  reference: RefObject<HTMLDivElement>
   onClick: MouseEventHandler<HTMLDivElement>
   handleCloseModal: () => void
 }) => {
   return (
-    <Modal onClick={onClick}>
+    <Modal reference={reference} onClick={onClick}>
       <div className="relative p-[50px] max-w-[500px] w-full rounded-section bg-foreground">
         <button
           onClick={handleCloseModal}
