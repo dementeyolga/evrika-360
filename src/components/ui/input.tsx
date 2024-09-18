@@ -12,6 +12,9 @@ interface PhoneInputProps {
   label?: string
 }
 
+const inputClassName =
+  'px-4 py-4 lg:px-[30px] lg:py-[26px] lg:text-xl rounded-full placeholder:text-font-secondary bg-background'
+
 export const TextInput = ({ name, label, placeholder }: TextInputProps) => {
   return (
     <label className="flex flex-col gap-y-2.5">
@@ -20,7 +23,7 @@ export const TextInput = ({ name, label, placeholder }: TextInputProps) => {
         type="text"
         placeholder={placeholder}
         name={name}
-        className="px-[30px] py-[26px] text-xl rounded-full placeholder:text-font-secondary bg-background"
+        className={inputClassName}
       />
     </label>
   )
@@ -40,7 +43,7 @@ export const PhoneInput = ({ label }: PhoneInputProps) => {
         placeholder="+375 (__) ___-__-__"
         name="Телефон"
         ref={inputRef}
-        className="px-[30px] py-[26px] text-xl rounded-full placeholder:text-font-secondary bg-background"
+        className={inputClassName}
       />
     </label>
   )

@@ -42,7 +42,7 @@ export const Modal = ({
     <div
       ref={reference}
       className={clsx(
-        'fixed w-screen min-h-screen h-max flex justify-center items-center overflow-y-auto animate-fade-in z-50',
+        'fixed w-screen h-screen flex justify-center items-center animate-fade-in z-50',
         background,
       )}
       onClick={onClick}

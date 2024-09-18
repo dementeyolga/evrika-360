@@ -37,7 +37,7 @@ export const Header = () => {
   }
 
   return (
-    <header className="pt-5 pb-[29px] lg:pt-10 lg:pb-7.5 flex justify-between items-center">
+    <header className="pt-5 pb-[29px] md:pt-10 lg:pb-7.5 flex justify-between gap-x-3 items-center">
       <a href="/" className="w-[120px] lg:w-fit">
         <img src="/logo.svg" alt="logo" />
       </a>
@@ -46,7 +46,7 @@ export const Header = () => {
         <ContactMessengers />
       </div>
 
-      <div className="hidden lg:flex gap-12 items-center">
+      <div className="hidden lg:flex gap-5 xl:gap-12 items-center">
         <ContactPhone />
         <PopupButton button="header" variant="basic">
           Заказать звонок

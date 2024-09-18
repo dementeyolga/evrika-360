@@ -2,7 +2,7 @@ import { MessengerIcon } from '../(icons)/messenger-icon'
 
 export const ContactMessengers = () => {
   return (
-    <div className="flex gap-5">
+    <div className="flex gap-3 xl:gap-5">
       <p className="text-font-secondary text-sm">
         Задайте вопрос <br /> напрямую в:
       </p>
