@@ -15,17 +15,17 @@ export default function HomePage() {
         <Header />
         <div className="flex flex-col lg:flex-row lg:items-end">
           <div className="lg:max-w-[590px] flex flex-col justify-end">
-            <h2 className="mb-5 lg:mb-21">
+            <h2 className="mb-5 lg:mb-[84px]">
               <b>Доверьте анализ и оценку качества работы</b> сотрудников
               речевой аналитике и избавьте владельца и ТОП-менеджмент от
               рутинных задач
             </h2>
-            <p className="mb-4 lg:mb-37px">
+            <p className="mb-4 lg:mb-[37px]">
               Запишитесь на демонстрацию и{' '}
               <b>за 30 минут узнайте чем речевая аналитика будет полезна</b> для
               вашей компании
             </p>
-            <div className="mb-[30px] lg:mb-77px">
+            <div className="mb-[30px] lg:mb-[77px]">
               <PopupButton button="action" variant="demo">
                 Записаться на демо
               </PopupButton>
@@ -59,7 +59,7 @@ export default function HomePage() {
           <DeptBenefitsSlider />
         </div>
 
-        <div className="hidden lg:block mb-32 grid grid-cols-3 gap-x-5 gap-y-[63px]">
+        <div className="hidden lg:grid mb-32 grid-cols-3 gap-x-5 gap-y-[63px]">
           {deptBenefits.map(({ dept, benefits }) => (
             <div key={dept} className="max-w-[281px] w-full">
               <TickIcon />
@@ -85,7 +85,7 @@ export default function HomePage() {
                 key={text}
                 icon={
                   <div>
-                    <img src={imgSrc} className="h-[60px] lg:w-auto" />
+                    <img src={imgSrc} className="h-[60px] lg:h-auto" />
                   </div>
                 }
               >
@@ -95,9 +95,9 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="relative mb-10 lg:max-w-[787px] lg:ml-auto lg:mb-25 pt-[90px] px-5 pb-6 lg:py-[75px] lg:pr-[122px] lg:pl-226px bg-sky-500 text-font-contrast rounded-section-mobile lg:rounded-section-md rounded-bl-none">
+        <div className="relative mb-10 lg:max-w-[787px] lg:ml-auto lg:mb-25 pt-[90px] px-5 pb-6 lg:py-[75px] lg:pr-[122px] lg:pl-226px bg-sky-500 text-font-contrast rounded-section-mobile lg:rounded-section-md rounded-bl-none lg:rounded-bl-none">
           <img
-            className="absolute -top-[42px] left-5 w-[120px] lg:w-auto lg:bottom-0 lg:-left-[21px]"
+            className="absolute -top-[42px] left-5 w-[120px] lg:w-auto lg:top-auto lg:bottom-0 lg:-left-[21px]"
             src="/character-hand.png"
             alt=""
           />
@@ -108,7 +108,7 @@ export default function HomePage() {
 
         <div className="mb-20 lg:mb-25">
           <CasesSlider />
-          <div className="flex justify-center mt-[30px]">
+          <div className="flex justify-center mt-4 lg:mt-[30px]">
             <PopupButton variant="test">
               Протестировать на своих данных
             </PopupButton>
@@ -116,18 +116,18 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="lg:px-11 lg:pt-[75px] lg:pb-[96px] mx-auto mb-25 w-full max-w-7xl flex flex-col lg:flex-row lg:items-center gap-y-[32px] lg:gap-x-[45px] bg-foreground rounded-section-mobile lg:rounded-section">
-        <div className="order-1 mb-[38px] lg:mb-0 flex justify-center lg:order-0 lg:max-w-[481px] lg:mt-4 scale-[1.04]">
+      <div className="lg:px-11 lg:pt-[75px] lg:pb-[96px] mx-auto mb-25 w-full max-w-7xl flex flex-col lg:flex-row lg:items-center gap-y-[32px] lg:gap-x-[43px] bg-foreground rounded-section-mobile lg:rounded-section">
+        <div className="order-1 lg:order-0 mb-[38px] lg:mb-0 flex justify-center lg:max-w-[481px] lg:mt-4 scale-[1.04] lg:scale-100">
           <img src="/imac.png" alt="computer picture" />
         </div>
 
-        <div className="mx-2.5 my-5 order-0 lg:order-1">
+        <div className="mx-2.5 my-5 lg:m-0 order-0 lg:order-1">
           <h2 className="mb-[26px] lg:mb-[33px]">
             Запишитесь на экскурсию <br />
             по сервису речевой аналитики <br />
             <b>Эврика360</b>
           </h2>
-          <div className="mb-7 lg:mb-[49px] max-w-[457px] flex flex-col gap-y-2.5 lg:gap-y-[25px]">
+          <div className="mb-7 lg:mb-[54px] max-w-[457px] flex flex-col gap-y-2.5 lg:gap-y-[25px]">
             <ListItem size="big">Покажем как работает сервис изнутри</ListItem>
             <ListItem size="big">
               Расскажем как речевая аналитика может быть полезна вашей компании

@@ -1,40 +1,72 @@
-import { MessengerIcon } from '@/components/(icons)/messenger-icon'
+'use client'
+
 import { PopupButton } from '../(buttons)/features/popup-button'
+import { ContactPhone } from './contact-phone'
+import { ContactMessengers } from './contact-messengers'
+import { useRef, useState, MouseEvent } from 'react'
+import { BurgerMenu } from '../burger-menu/burger-menu'
 
 export const Header = () => {
+  const [isBurgerOpen, setIsBurgerOpen] = useState(false)
+  const burgerRef = useRef<HTMLDivElement>(null)
+
+  const handleOpenBurger = () => {
+    setIsBurgerOpen(true)
+  }
+
+  const handleCloseBurger = () => {
+    const burger = burgerRef.current
+
+    if (burger) {
+      burger.addEventListener(
+        'animationend',
+        () => {
+          setIsBurgerOpen(false)
+        },
+        { once: true },
+      )
+
+      burger.classList.add('animate-fade-out')
+    }
+  }
+
+  const handleBurgerClick = (e: MouseEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget) {
+      handleCloseBurger()
+    }
+  }
+
   return (
-    <header className="pt-5 pb-[29px] lg:pt-9 lg:pb-7.5 flex justify-between items-center">
+    <header className="pt-5 pb-[29px] lg:pt-10 lg:pb-7.5 flex justify-between items-center">
       <a href="/" className="w-[120px] lg:w-fit">
         <img src="/logo.svg" alt="logo" />
       </a>
 
-      <div className="hidden lg:block flex gap-5">
-        <p className="text-font-secondary text-sm">
-          Задайте вопрос <br /> напрямую в:
-        </p>
-        <div className="flex gap-2.5">
-          <MessengerIcon variant="telegram" href="/" />
-          <MessengerIcon variant="whatsapp" href="/" />
-        </div>
+      <div className="hidden lg:block">
+        <ContactMessengers />
       </div>
 
-      <div className="hidden lg:block flex gap-12 items-center">
-        <div className="flex flex-col gap-1">
-          <a href="tel: +375293885512" className="text-xl font-bold flex gap-1">
-            +375-29-388-55-12 <img src="/arrow.svg" alt="arrow icon" />
-          </a>
-          <p className="smallest text-font-secondary">
-            Пн-Пт: с 09-00 до 18-00
-          </p>
-        </div>
+      <div className="hidden lg:flex gap-12 items-center">
+        <ContactPhone />
         <PopupButton button="header" variant="basic">
           Заказать звонок
         </PopupButton>
       </div>
 
-      <div className="w-9 h-9 flex justify-center items-center lg:hidden">
+      <button
+        onClick={handleOpenBurger}
+        className="w-9 h-9 flex justify-center items-center lg:hidden"
+      >
         <img src="/burger-icon.svg" alt="" />
-      </div>
+      </button>
+
+      {isBurgerOpen && (
+        <BurgerMenu
+          reference={burgerRef}
+          onClick={handleBurgerClick}
+          handleCloseburger={handleCloseBurger}
+        />
+      )}
     </header>
   )
 }

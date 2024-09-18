@@ -57,6 +57,7 @@ export default function RootLayout({
     <html lang="ru" className={clsx(dmSans.variable)}>
       <body className="font-sans">
         <div id="modal-root"></div>
+        <div id="burger-root"></div>
         {children}
       </body>
     </html>

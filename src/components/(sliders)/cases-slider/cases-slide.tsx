@@ -49,7 +49,7 @@ export const CasesSlide = ({
     <div className="p-5 lg:py-10 lg:px-[50px] bg-foreground rounded-block lg:rounded-section-sm">
       <p
         className={clsx(
-          'mb-4 lg:mb-6 px-2.5 lg:px-5 py-2 lg:py-[2.5] w-fit small rounded-block-mobile lg:rounded-full',
+          'mb-4 lg:mb-6 px-2.5 lg:px-5 py-2 lg:py-2.5 w-fit small rounded-block-mobile lg:rounded-full',
           colorConfig[sphere.color].bg,
           colorConfig[sphere.color].text,
         )}

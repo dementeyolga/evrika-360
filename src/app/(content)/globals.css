@@ -97,7 +97,7 @@ p.xl {
   font-size: 1.6875rem;
   line-height: 2.5625rem;
 
-  @media (max-width: 10244px) {
+  @media (max-width: 1024px) {
     font-size: 1rem;
     line-height: 1.625rem;
   }

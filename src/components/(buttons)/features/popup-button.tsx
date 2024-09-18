@@ -41,7 +41,7 @@ export const PopupButton = ({
     }
   }
 
-  const wrapperClickHandler = (e: MouseEvent<HTMLDivElement>) => {
+  const handleWrapperClick = (e: MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
       handleCloseModal()
     }
@@ -68,7 +68,7 @@ export const PopupButton = ({
       {isModalOpen && (
         <Modal
           reference={modalRef}
-          onClick={wrapperClickHandler}
+          onClick={handleWrapperClick}
           handleCloseModal={handleCloseModal}
         />
       )}

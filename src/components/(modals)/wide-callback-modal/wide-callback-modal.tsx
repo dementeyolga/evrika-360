@@ -19,15 +19,15 @@ export const WideCallbackModal = ({
 }) => {
   return (
     <Modal reference={reference} onClick={onClick} bg="darker">
-      <div className="relative my-[70px] mx-2.5 overflow-y-auto flex flex-col lg:flex-row justify-center max-w-[600px] lg:max-w-[1000px] lg:min-h-[790px] w-full">
+      <div className="relative my-[70px] mx-2.5 flex flex-col lg:flex-row justify-center max-w-[600px] lg:max-w-[1000px] w-full">
         <button
           onClick={handleCloseModal}
-          className="absolute -top-[55px] left-1/2 -translate-x-1/2 w-[50px] h-[50px] bg-foreground flex justify-center items-center rounded-full"
+          className="absolute -top-[65px] left-1/2 -translate-x-1/2 w-[50px] h-[50px] bg-foreground flex justify-center items-center rounded-full"
         >
           <img src="/cross.svg" alt="" />
         </button>
 
-        <div className="py-5 px-2.5 lg:p-[40px] w-full rounded-section-mobile lg:rounded-section bg-background">
+        <div className="py-5 px-2.5 lg:p-[40px] lg:pr-[130px] w-full rounded-section-mobile lg:rounded-section bg-background">
           <div className="relative max-w-[477px] h-full flex flex-col">
             <p className="xl mb-5 lg:mb-[30px] text-center lg:text-left">
               {description}
@@ -36,13 +36,13 @@ export const WideCallbackModal = ({
               <b>Расскажем о возможностях сервиса</b> и рассчитаем
               целесообразность применения в вашей компании
             </p>
-            <div className="hidden lg:block flex-grow flex items-end">
+            <div className="hidden lg:flex flex-grow flex items-end">
               <img src="/macbook.png" alt="" className="max-w-fit" />
             </div>
           </div>
         </div>
 
-        <div className="py-5 px-2.5 relative -top-14 lg:absolute lg:top-0 lg:right-0 lg:bottom-0 p-5 lg:p-[40px] max-w-[460px] w-full rounded-section-mobile lg:rounded-section bg-foreground">
+        <div className="py-5 px-2.5 -mt-14 lg:mt-0 lg:-ml-[110px] p-5 lg:p-[40px] max-w-[460px] w-full rounded-section-mobile lg:rounded-section bg-foreground z-10">
           <div className="mb-6 text-center text-lg lg:text-left lg:text-xl leading-[34px]">
             {formDescription}
           </div>
