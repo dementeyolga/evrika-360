@@ -32,8 +32,8 @@ export const CallbackForm = ({ buttonText, basic }: CallbackFormProps) => {
 
       <p className="text-center leading-6">
         Или звоните по номеру <br />
-        <a href="tel:+375" className="font-bold">
-          +375.....
+        <a href="tel:+375-29-388-55-12" className="font-bold">
+          +375-29-388-55-12
         </a>
       </p>
     </form>

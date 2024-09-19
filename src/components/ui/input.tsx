@@ -1,7 +1,7 @@
 'use client'
 
+import { FocusEvent } from 'react'
 import { useMask } from '@react-input/mask'
-
 interface TextInputProps {
   name: string
   label?: string
@@ -35,6 +35,22 @@ export const PhoneInput = ({ label }: PhoneInputProps) => {
     replacement: { _: /\d/ },
   })
 
+  const handleFocus = (e: FocusEvent<HTMLInputElement>) => {
+    const value = e.currentTarget.value
+
+    if (value === '') {
+      e.currentTarget.value = '+375 ('
+    }
+  }
+
+  const handleChange = (e: FocusEvent<HTMLInputElement>) => {
+    const value = e.currentTarget.value
+
+    if (value === '') {
+      e.currentTarget.value = '+375 ('
+    }
+  }
+
   return (
     <label className="flex flex-col gap-y-2.5">
       {label && <p className="ml-[30px] small">{label}</p>}
@@ -44,6 +60,8 @@ export const PhoneInput = ({ label }: PhoneInputProps) => {
         name="Телефон"
         ref={inputRef}
         className={inputClassName}
+        onFocus={handleFocus}
+        onChange={handleChange}
       />
     </label>
   )
