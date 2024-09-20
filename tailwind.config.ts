@@ -72,6 +72,10 @@ const config: Config = {
         '42': '10.5rem',
         '25': '6.25rem',
       },
+      gap: {
+        block: '110px',
+        'block-mobile': '120px',
+      },
       lineHeight: {
         '7.5': '1.875rem',
       },
