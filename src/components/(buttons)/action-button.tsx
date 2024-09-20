@@ -10,7 +10,7 @@ export const ActionButton = ({ full, ...props }: ButtonProps) => {
     <button
       className={clsx(
         full ? 'md:w-full lg:w-full' : 'md:w-fit lg:w-fit',
-        'w-full p-5 lg:px-15 lg:py-[26px] text-white text-sm lg:text-xl font-bold rounded-full bg-green-500 shadow-button hover:-translate-y-2 transition-transform duration-300',
+        'w-full px-6 py-5 xl:px-15 xl:py-[26px] text-white text-sm md:text-base xl:text-xl font-bold rounded-full bg-green-500 shadow-button hover:-translate-y-2 transition-transform duration-300',
       )}
       {...props}
     >

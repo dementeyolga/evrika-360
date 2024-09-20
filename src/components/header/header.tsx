@@ -46,7 +46,7 @@ export const Header = () => {
         <ContactMessengers />
       </div>
 
-      <div className="hidden lg:flex gap-5 xl:gap-12 items-center">
+      <div className="hidden lg:flex gap-5 lg:gap-4 xl:gap-12 items-center">
         <ContactPhone />
         <PopupButton button="header" variant="basic">
           Заказать звонок

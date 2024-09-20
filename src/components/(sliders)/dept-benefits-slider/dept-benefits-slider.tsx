@@ -23,6 +23,11 @@ export const DeptBenefitsSlider = () => {
 
   return (
     <section className={s.embla}>
+      <div className="mb-6 flex gap-[13px]">
+        <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+        <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+      </div>
+
       <div className={s.embla__viewport} ref={emblaRef}>
         <div className={s.embla__container}>
           {deptBenefits.map(({ dept, benefits }) => (
@@ -37,11 +42,6 @@ export const DeptBenefitsSlider = () => {
             </div>
           ))}
         </div>
-      </div>
-
-      <div className="mt-5 flex gap-[13px] justify-end">
-        <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-        <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
       </div>
     </section>
   )

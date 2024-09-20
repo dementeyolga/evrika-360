@@ -6,12 +6,10 @@ import { createPortal } from 'react-dom'
 
 export const Modal = ({
   reference,
-  bg = 'standard',
   onClick,
   children,
 }: {
   reference: RefObject<HTMLDivElement>
-  bg?: 'standard' | 'darker'
   onClick: MouseEventHandler<HTMLDivElement>
   children: ReactElement | ReactElement[]
 }) => {
@@ -33,17 +31,11 @@ export const Modal = ({
 
   if (!modalRoot) return null
 
-  const background =
-    bg === 'standard'
-      ? 'bg-background-transparent'
-      : 'bg-background-transparent-darker'
-
   return createPortal(
     <div
       ref={reference}
       className={clsx(
-        'fixed w-screen h-screen flex justify-center items-center animate-fade-in z-50',
-        background,
+        'fixed w-full h-screen flex justify-center items-center animate-fade-in z-50 bg-background-transparent',
       )}
       onClick={onClick}
     >

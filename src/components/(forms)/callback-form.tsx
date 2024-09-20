@@ -9,7 +9,7 @@ interface CallbackFormProps {
 
 export const CallbackForm = ({ buttonText, basic }: CallbackFormProps) => {
   return (
-    <form className="w-full flex flex-col gap-5">
+    <form className="w-full flex flex-col gap-4 xl:gap-5">
       <TextInput name="Имя" label="Ваше имя" placeholder="Например, Иван" />
       {!basic && (
         <TextInput
@@ -20,7 +20,7 @@ export const CallbackForm = ({ buttonText, basic }: CallbackFormProps) => {
       )}
       <PhoneInput label="Введите ваш номер телефона" />
 
-      <div className="flex flex-col gap-[26px]">
+      <div className="flex flex-col gap-3 xl:gap-y-5">
         <ActionButton full type="submit">
           {buttonText}
         </ActionButton>

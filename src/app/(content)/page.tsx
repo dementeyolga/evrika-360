@@ -13,32 +13,28 @@ export default function HomePage() {
     <div className="bg-background p-2.5 lg:p-5">
       <div className="px-2.5 md:px-10 lg:px-15 mx-auto mb-[140px] lg:mb-25 w-full max-w-7xl bg-foreground rounded-section-mobile lg:rounded-section overflow-hidden">
         <Header />
-        <div className="flex flex-col lg:flex-row lg:items-end">
-          <div className="lg:max-w-[590px] xl:shrink-0 flex flex-col justify-end z-10">
-            <h2 className="mb-5 lg:mb-[84px]">
+        <div className="flex flex-col lg:flex-row lg:h-[calc(100vh_-_170px)] lg:max-h-[650px]">
+          <div className="grow basis-1/2 flex flex-col justify-between z-10">
+            <h2 className="mb-5 lg:my-6">
               <b>Доверьте анализ и оценку качества работы</b> сотрудников
               речевой аналитике и избавьте владельца и ТОП-менеджмент от
               рутинных задач
             </h2>
-            <p className="mb-4 lg:mb-[37px]">
+            <p className="mb-4 lg:4">
               Запишитесь на демонстрацию и{' '}
               <b>за 30 минут узнайте чем речевая аналитика будет полезна</b> для
               вашей компании
             </p>
-            <div className="mb-[30px] lg:mb-[77px]">
+            <div className="mb-[30px] xl:mb-[77px]">
               <PopupButton button="action" variant="demo">
                 Записаться на демо
               </PopupButton>
             </div>
           </div>
 
-          <div className="lg:relative lg:shrink-0 w-full lg:max-w-[450px] lg:h-[570px] xl:max-w-[576px] xl:h-[670px]">
-            <div className="flex justify-center lg:absolute lg:bottom-0 lg:-right-6 xl:right-0 xl:-left-[25px] lg:h-full">
-              <img
-                className="lg:h-full lg:w-auto lg:max-w-max"
-                src="/promo.png"
-                alt=""
-              />
+          <div className="max-h-full self-center lg:self-end grow basis-1/2 flex">
+            <div className="max-h-full flex justify-center">
+              <img className="" src="/promo.png" alt="" />
             </div>
           </div>
         </div>

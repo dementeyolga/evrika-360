@@ -13,7 +13,7 @@ interface PhoneInputProps {
 }
 
 const inputClassName =
-  'px-4 py-4 lg:px-[30px] lg:py-[26px] lg:text-xl rounded-full placeholder:text-font-secondary bg-background'
+  'px-4 py-4 lg:px-7 lg:py-4 lg:text-lg xl:text-xl rounded-full placeholder:text-font-secondary bg-background'
 
 export const TextInput = ({ name, label, placeholder }: TextInputProps) => {
   return (

@@ -62,7 +62,7 @@ export const PopupButton = ({
   }
 
   return (
-    <div>
+    <>
       <Button onClick={handleOpenModal}>{children}</Button>
 
       {isModalOpen && (
@@ -72,6 +72,6 @@ export const PopupButton = ({
           handleCloseModal={handleCloseModal}
         />
       )}
-    </div>
+    </>
   )
 }
