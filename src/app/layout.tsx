@@ -67,4 +67,5 @@ export default function RootLayout({
 export const viewport: Viewport = {
   initialScale: 1,
   width: 'device-width',
+  interactiveWidget: 'overlays-content',
 }
