@@ -28,7 +28,7 @@ export const WideCallbackModal = ({
         </button>
 
         <div className="relative max-w-[600px] lg:max-w-[800px] xl:max-w-[1000px] mt-[30px] w-full rounded-section-mobile lg:rounded-section-sm overflow-hidden bg-foreground">
-          <div className="flex flex-col lg:flex-row lg:justify-center max-h-[calc(100dvh_-_130px)]">
+          <div className="flex flex-col lg:flex-row lg:justify-center max-h-[calc(100svh_-_130px)]">
             <div className="py-5 px-2.5 md:py-[20px] md:px-[26px] lg:pr-[130px] xl:pr-[130px] xl:p-[40px]  w-full bg-background">
               <div className="relative lg:max-w-[350px] xl:max-w-[477px] h-full flex flex-col">
                 <p className="xl mb-5 lg:mb-[30px] text-center lg:text-left">
