@@ -33,6 +33,10 @@ const config: Config = {
         pale: 'var(--slate-pale)',
       },
       white: 'var(--white)',
+      error: {
+        200: 'var(--error-200)',
+        500: 'var(--error-500)',
+      },
       border: 'var(--border)',
       font: {
         main: 'var(--font-main)',

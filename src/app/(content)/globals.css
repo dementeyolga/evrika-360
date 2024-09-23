@@ -18,6 +18,8 @@
   --slate-800: #07273f;
   --slate-pale: #072840ab;
   --white: #ffffff;
+  --error-500: #ac1a1a;
+  --error-200: #f3e5e5;
   --font-main: #072840;
   --font-contrast: #ffffff;
   --font-secondary: #8998a4;
@@ -39,7 +41,6 @@ body {
 }
 
 input {
-  border: none;
   outline: none;
 }
 
