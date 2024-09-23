@@ -49,8 +49,11 @@ export const CallbackForm = ({ buttonText, basic }: CallbackFormProps) => {
       ) => {
         console.log(JSON.stringify(values, null, 2))
         setSubmitting(false)
-        console.log('form submitted')
-        router.push('/thank-you')
+        if (location.pathname === '/thank-you') {
+          location.reload()
+        } else {
+          router.push('/thank-you')
+        }
       }}
     >
       {(formik) => (
