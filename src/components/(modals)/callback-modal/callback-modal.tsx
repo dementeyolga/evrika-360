@@ -21,7 +21,7 @@ export const CallbackModal = ({
           <img src="/cross.svg" alt="" />
         </button>
 
-        <div className="relative mt-[30px] p-5 xl:p-10 flex flex-col max-w-[500px] max-h-[calc(100%_-_130px)] w-full rounded-section-mobile lg:rounded-section-sm overflow-y-auto bg-foreground">
+        <div className="relative mt-[30px] p-5 xl:p-10 flex flex-col max-w-[500px] max-h-[calc(100dvh_-_130px)] w-full rounded-section-mobile lg:rounded-section-sm overflow-y-auto bg-foreground">
           <p className="text-center lg:text-left mb-4 xl:mb-6 text-lg xl:text-xl xl:text-2xl">
             Введите свои данные в форму и{' '}
             <b>закажите звонок нашего специалиста для консультации </b>
