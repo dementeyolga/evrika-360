@@ -39,7 +39,7 @@ export const BurgerMenu = ({
       onClick={onClick}
       className="fixed h-screen w-screen flex justify-end bg-background-transparent z-20 animate-fade-in"
     >
-      <div className="w-[260px] h-full py-[30px] px-5 bg-foreground">
+      <div className="w-max h-full py-[30px] px-5 bg-foreground">
         <button
           onClick={handleCloseburger}
           className="w-9 h-9 mb-6  ml-auto flex justify-center items-center"
