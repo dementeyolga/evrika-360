@@ -93,11 +93,7 @@ export const CallbackForm = ({ buttonText, basic }: CallbackFormProps) => {
           </fieldset>
 
           <div className="flex flex-col gap-3 xl:gap-y-5">
-            <ActionButton
-              full
-              type="submit"
-              disabled={formik.isSubmitting || !formik.isValid}
-            >
+            <ActionButton full type="submit" disabled={formik.isSubmitting}>
               {buttonText}
             </ActionButton>
 
