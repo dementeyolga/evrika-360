@@ -12,8 +12,10 @@
 }
 .embla__container {
   display: flex;
+  align-items: flex-start;
   touch-action: pan-y pinch-zoom;
   margin-left: calc(var(--slide-spacing) * -1);
+  transition: height 0.2s;
 }
 .embla__slide {
   transform: translate3d(0, 0, 0);

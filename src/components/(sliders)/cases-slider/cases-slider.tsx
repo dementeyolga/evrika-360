@@ -9,9 +9,13 @@ import useEmblaCarousel from 'embla-carousel-react'
 import s from './cases-slider.module.css'
 import { casesForSlider } from '@/data/cases-for-slider'
 import { CasesSlide } from './cases-slide'
+import AutoHeight from 'embla-carousel-auto-height'
 
 export const CasesSlider = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ align: 'start', loop: true })
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { align: 'start', loop: true },
+    [AutoHeight()],
+  )
 
   const {
     prevBtnDisabled,

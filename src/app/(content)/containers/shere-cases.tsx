@@ -17,7 +17,7 @@ export const SphereCases = () => {
 
       <div>
         <CasesSlider />
-        <div className="flex justify-center mt-4 lg:mt-[30px]">
+        <div className="flex justify-center mt-5 lg:mt-[30px]">
           <PopupButton variant="test">
             Протестировать на своих данных
           </PopupButton>
