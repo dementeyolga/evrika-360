@@ -78,7 +78,7 @@ const config: Config = {
       },
       gap: {
         block: '110px',
-        'block-mobile': '120px',
+        'block-mobile': '84px',
       },
       lineHeight: {
         '7.5': '1.875rem',
