@@ -1,8 +1,9 @@
 import clsx from 'clsx'
+import { ReactElement } from 'react'
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   full?: true
-  children: string
+  children: string | ReactElement
 }
 
 export const ActionButton = ({ full, ...props }: ButtonProps) => {
