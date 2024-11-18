@@ -13,3 +13,11 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Production build
+
+To create a production build, run:
+
+```bash
+npm run build
+```

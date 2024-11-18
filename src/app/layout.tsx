@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import localFont from 'next/font/local'
 import './(content)/globals.css'
 import clsx from 'clsx'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   icons: {
@@ -55,7 +56,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" className={clsx(dmSans.variable)}>
+      {/* Google Tag Manager  */}
+      <GoogleTagManager gtmId="GTM-5F3WV7LT" />
       <body className="font-sans">
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5F3WV7LT"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
+
         <div id="modal-root"></div>
         <div id="burger-root"></div>
         {children}
