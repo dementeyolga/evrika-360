@@ -32,6 +32,9 @@
   --radius-block: 20px;
   --radius-block-sm: 16px;
   --radius-block-mobile: 10px;
+  --background-spinner: radial-gradient(farthest-side, #ffffff 94%, #0000)
+      top/8px 8px no-repeat,
+    conic-gradient(#0000 30%, #ffffff);
 }
 
 body {

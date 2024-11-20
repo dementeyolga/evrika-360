@@ -3,9 +3,12 @@
 import { ActionButton } from '../(buttons)/action-button'
 import { Checkbox } from '../ui/checkbox'
 import { PhoneInput, TextInput } from '../ui/input'
-import { ErrorMessage, Form, Formik, FormikHelpers, FormikValues } from 'formik'
+import { ErrorMessage, Form, Formik } from 'formik'
 import { object, string, boolean } from 'yup'
 import { useRouter } from 'next/navigation'
+import { createBitrixLink } from '@/lib/utils'
+import axios from 'axios'
+import { useState } from 'react'
 
 interface CallbackFormProps {
   basic?: true
@@ -14,19 +17,45 @@ interface CallbackFormProps {
 
 interface FormValues {
   name: string
-  position: string
+  post: string
   phone: string
   personalDataAgreed: boolean
 }
 
 export const CallbackForm = ({ buttonText, basic }: CallbackFormProps) => {
+  const [formError, setFormError] = useState<string | null>(null)
   const router = useRouter()
+
+  const handleSubmit = async (values: FormValues) => {
+    setFormError(null)
+
+    const fetchURL = createBitrixLink({
+      name: values.name,
+      post: values.post,
+      phone: values.phone,
+    })
+
+    try {
+      const response = await axios.get(fetchURL)
+      if (response.status === 200) {
+        if (location.pathname === '/thank-you') {
+          location.reload()
+        } else {
+          router.push('/thank-you')
+        }
+      } else {
+        throw new Error()
+      }
+    } catch {
+      setFormError('Что-то пошло не так, попробуйте еще раз.')
+    }
+  }
 
   return (
     <Formik
       initialValues={{
         name: '',
-        position: '',
+        post: '',
         phone: '',
         personalDataAgreed: false,
       }}
@@ -34,7 +63,7 @@ export const CallbackForm = ({ buttonText, basic }: CallbackFormProps) => {
         name: string()
           .min(2, 'Имя должно содержать от 2-х символов')
           .required('Обязательное поле'),
-        position: string().min(2, 'Роль должна содержать от 2-х символов'),
+        post: string().min(2, 'Роль должна содержать от 2-х символов'),
         phone: string()
           .required('Обязательное поле')
           .matches(
@@ -43,18 +72,7 @@ export const CallbackForm = ({ buttonText, basic }: CallbackFormProps) => {
           ),
         personalDataAgreed: boolean().isTrue('Обязательное поле'),
       })}
-      onSubmit={(
-        values: FormikValues,
-        { setSubmitting }: FormikHelpers<FormValues>,
-      ) => {
-        console.log(JSON.stringify(values, null, 2))
-        setSubmitting(false)
-        if (location.pathname === '/thank-you') {
-          location.reload()
-        } else {
-          router.push('/thank-you')
-        }
-      }}
+      onSubmit={handleSubmit}
     >
       {(formik) => (
         <Form className="w-full flex flex-col gap-4 xl:gap-5">
@@ -75,10 +93,10 @@ export const CallbackForm = ({ buttonText, basic }: CallbackFormProps) => {
               <TextInput
                 label="Ваша роль в компании"
                 placeholder="Например, CEO"
-                valid={!(formik.touched.position && formik.errors.position)}
-                {...formik.getFieldProps('position')}
+                valid={!(formik.touched.post && formik.errors.post)}
+                {...formik.getFieldProps('post')}
               />
-              <ErrorMessage name="position">
+              <ErrorMessage name="post">
                 {(msg) => <p className="ml-6 text-error-500">{msg}</p>}
               </ErrorMessage>
             </fieldset>
@@ -96,6 +114,10 @@ export const CallbackForm = ({ buttonText, basic }: CallbackFormProps) => {
           </fieldset>
 
           <div className="flex flex-col gap-3 xl:gap-y-5">
+            {formError && (
+              <p className="text-center text-error-500">{formError}</p>
+            )}
+
             <ActionButton full type="submit" disabled={formik.isSubmitting}>
               {buttonText}
             </ActionButton>
@@ -106,7 +128,7 @@ export const CallbackForm = ({ buttonText, basic }: CallbackFormProps) => {
                 {...formik.getFieldProps('personalDataAgreed')}
               />
               <ErrorMessage name="personalDataAgreed">
-                {(msg) => <p className="ml-6 text-error-500">{msg}</p>}
+                {(msg) => <p className="text-center text-error-500">{msg}</p>}
               </ErrorMessage>
             </fieldset>
           </div>

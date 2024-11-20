@@ -60,6 +60,9 @@ const config: Config = {
         'block-sm': 'var(--radius-block-sm)',
         'block-mobile': 'var(--radius-block-mobile)',
       },
+      backgroundImage: {
+        spinner: 'var(--background-spinner)',
+      },
       maxWidth: {
         '7xl': '1240px',
       },
@@ -90,11 +93,15 @@ const config: Config = {
       animation: {
         'fade-out': 'fade 0.2s ease-in-out forwards',
         'fade-in': 'fade 0.2s ease-in-out reverse forwards',
+        spinner: 'rotate 1s infinite linear',
       },
       keyframes: {
         fade: {
           from: { opacity: '1' },
           to: { opacity: '0' },
+        },
+        rotate: {
+          to: { transform: 'rotate(1turn)' },
         },
       },
     },
